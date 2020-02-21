@@ -26,7 +26,7 @@ namespace MonkeyFinder.ViewModel
         HttpClient httpClient;
         HttpClient Client => httpClient ?? (httpClient = new HttpClient());
 
-        async Task GetMonkeysAsync()
+        public async Task GetMonkeysAsync()
         {
             if (IsBusy)
                 return;
