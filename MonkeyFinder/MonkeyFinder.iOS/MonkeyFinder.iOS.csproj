@@ -171,7 +171,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\MonkeyFinder\MonkeyFinder.csproj">
-      <Project>{93F5F266-8792-4E1A-9C0E-EF162E43AC44}</Project>
+      <Project>{A4767409-FD5A-408C-A0DE-9CAA76254719}</Project>
       <Name>MonkeyFinder</Name>
     </ProjectReference>
   </ItemGroup>
