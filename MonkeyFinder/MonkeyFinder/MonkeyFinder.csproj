@@ -14,18 +14,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="monkeydata.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="monkeydata.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="System.Text.Json" Version="4.7.1" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.4.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.4.0.991640" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.0-pre1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.282-pre4" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.5.0.282-pre4" />
   </ItemGroup>
 </Project>
