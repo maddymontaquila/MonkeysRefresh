@@ -18,12 +18,9 @@ namespace MonkeyFinder
             };
         }
 
-        const string AppCenteriOS = "";
-        const string AppCenterAndroid = "";
-
         protected override void OnStart()
         {
-
+            // Handle when your app starts
         }
 
         protected override void OnSleep()
