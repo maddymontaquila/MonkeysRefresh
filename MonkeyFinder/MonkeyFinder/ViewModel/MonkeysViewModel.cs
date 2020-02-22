@@ -56,13 +56,13 @@ namespace MonkeyFinder.ViewModel
                 //    };
                 //}
 
-                var json = await Client.GetStringAsync("https://montemagno.com/monkeys.json");
+                //var json = await Client.GetStringAsync("https://montemagno.com/monkeys.json");
 
-                var monkeys = Monkey.FromJson(json);
+                //var monkeys = Monkey.FromJson(json);
 
-                Monkeys.Clear();
-                foreach (var monkey in monkeys)
-                    Monkeys.Add(monkey);
+                //Monkeys.Clear();
+                //foreach (var monkey in monkeys)
+                //    Monkeys.Add(monkey);
             }
             catch (Exception ex)
             {
