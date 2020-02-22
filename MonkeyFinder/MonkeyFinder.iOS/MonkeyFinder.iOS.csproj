@@ -183,7 +183,7 @@
     <ProjectReference Include="..\..\MonkeyFinder.watchOS\MonkeyFinder.watchOS.WatchOSApp\MonkeyFinder.watchOS.WatchOSApp.csproj">
       <IsWatchApp>true</IsWatchApp>
       <Project>{F602291D-2FA4-4BFD-ABF6-0654069E63B3}</Project>
-      <Name>MonkeyFinder.watchOS.WatchOSApp</Name>
+      <Name>MonkeyFinder.WatchOSApp</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

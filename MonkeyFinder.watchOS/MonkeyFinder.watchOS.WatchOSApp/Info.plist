@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>MonkeyFinder.watchOS.WatchOSApp</string>
+	<string>MonkeyFinder.WatchOSApp</string>
 	<key>CFBundleDisplayName</key>
 	<string>MonkeyFinder.watchOS.WatchOSApp</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.MonkeyFinder.watchOS.watchkitapp</string>
+	<string>com.companyname.MonkeyFinder.watchkitapp</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleShortVersionString</key>

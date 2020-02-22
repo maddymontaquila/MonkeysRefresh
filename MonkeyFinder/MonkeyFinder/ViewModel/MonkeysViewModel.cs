@@ -35,34 +35,30 @@ namespace MonkeyFinder.ViewModel
             try
             {
                 IsBusy = true;
-                //Monkey[] monkeys = null;
+                Monkey[] monkeys = null;
 
-                //var connection = Connectivity.NetworkAccess;
+                var connection = Connectivity.NetworkAccess;
 
-                //// if internet is working
-                //if (connection == NetworkAccess.Internet)
-                //{
-                //    var json = await Client.GetStringAsync("https://montemagno.com/monkeys.json");
+                // if internet is working
+                if (connection == NetworkAccess.Internet)
+                {
+                    var json = await Client.GetStringAsync("https://montemagno.com/monkeys.json");
 
-                //    monkeys = Monkey.FromJson(json);
-                //}
-                //else
-                //{
-                //    monkeys = new Monkey[]
-                //    {
-                //        new Monkey { Name = "Sample Monkey", Location = "Sample Monkey" },
-                //        new Monkey { Name = "Sample Monkey", Location = "Sample Monkey" },
-                //        new Monkey { Name = "Sample Monkey", Location = "Sample Monkey" }
-                //    };
-                //}
+                    monkeys = Monkey.FromJson(json);
+                }
+                else
+                {
+                    monkeys = new Monkey[]
+                    {
+                        new Monkey { Name = "Sample Monkey", Location = "Sample Monkey" },
+                        new Monkey { Name = "Sample Monkey", Location = "Sample Monkey" },
+                        new Monkey { Name = "Sample Monkey", Location = "Sample Monkey" }
+                    };
+                }
 
-                //var json = await Client.GetStringAsync("https://montemagno.com/monkeys.json");
-
-                //var monkeys = Monkey.FromJson(json);
-
-                //Monkeys.Clear();
-                //foreach (var monkey in monkeys)
-                //    Monkeys.Add(monkey);
+                Monkeys.Clear();
+                foreach (var monkey in monkeys)
+                    Monkeys.Add(monkey);
             }
             catch (Exception ex)
             {

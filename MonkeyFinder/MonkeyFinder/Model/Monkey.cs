@@ -21,13 +21,13 @@ namespace MonkeyFinder.Model
         public double Longitude { get; set; }
     }
     
-    //public partial class Monkey
-    //{
-    //    public static Monkey[] FromJson(string json) => JsonSerializer.Deserialize<Monkey[]>(json);
-    //}
+    public partial class Monkey
+    {
+        public static Monkey[] FromJson(string json) => JsonSerializer.Deserialize<Monkey[]>(json);
+    }
 
-    //public static class Serialize
-    //{
-    //    public static string ToJson(this Monkey[] self) => JsonSerializer.Serialize(self);
-    //}
+    public static class Serialize
+    {
+        public static string ToJson(this Monkey[] self) => JsonSerializer.Serialize(self);
+    }
 }
