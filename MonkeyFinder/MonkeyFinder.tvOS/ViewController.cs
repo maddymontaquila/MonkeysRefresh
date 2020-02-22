@@ -10,7 +10,6 @@ namespace MonkeyTV
     {
 
         MonkeysViewModel viewModel;
-        Random random = new Random();
         public ViewController(IntPtr handle) : base(handle)
         {
 
@@ -29,16 +28,13 @@ namespace MonkeyTV
         async private void ButtonGetMonkeys_PrimaryActionTriggered(object sender, EventArgs e)
         {
             ProgressBarMonkeys.StartAnimating();
-            if (viewModel.Monkeys.Count == 0)
-                await viewModel.GetMonkeysAsync();
 
-            if (viewModel.Monkeys.Count == 0)
+            var image = await viewModel.GetRandomMonkey();
+
+            if (string.IsNullOrWhiteSpace(image))
                 return;
-
-            var next = random.Next(0, viewModel.Monkeys.Count);
-            var url = NSUrl.FromString(viewModel.Monkeys[next].Image);
-
-            ImageMonkey.SetImage(url);
+            
+            ImageMonkey.SetImage(NSUrl.FromString(image));
 
             ProgressBarMonkeys.StopAnimating();
         }

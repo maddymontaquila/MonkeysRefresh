@@ -14,6 +14,7 @@ namespace MonkeyFinder.ViewModel
 {
     public class MonkeysViewModel : BaseViewModel
     {
+        Random random = new Random();
         public Command GetMonkeysCommand { get; }
         public ObservableCollection<Monkey> Monkeys { get; }
         public MonkeysViewModel()
@@ -26,7 +27,7 @@ namespace MonkeyFinder.ViewModel
         HttpClient httpClient;
         HttpClient Client => httpClient ?? (httpClient = new HttpClient());
 
-        public async Task GetMonkeysAsync()
+        async Task GetMonkeysAsync()
         {
             if (IsBusy)
                 return;
@@ -63,6 +64,18 @@ namespace MonkeyFinder.ViewModel
             {
                 IsBusy = false;
             }
+        }
+
+        public async Task<string> GetRandomMonkey()
+        {
+            if (Monkeys.Count == 0)
+                await GetMonkeysAsync();
+
+            if (Monkeys.Count == 0)
+                return string.Empty;
+
+            var next = random.Next(0, Monkeys.Count);
+            return Monkeys[next].Image;
         }
     }
 }
