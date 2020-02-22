@@ -37,7 +37,8 @@ namespace MonkeyFinder.ViewModel
                 IsBusy = true;
                 Monkey[] monkeys = null;
 
-                var connection = Connectivity.NetworkAccess;
+                var connection = DeviceInfo.Platform == DevicePlatform.watchOS ?
+                    NetworkAccess.Internet : Connectivity.NetworkAccess;
 
                 // if internet is working
                 if (connection == NetworkAccess.Internet)
@@ -63,6 +64,9 @@ namespace MonkeyFinder.ViewModel
             catch (Exception ex)
             {
                 Debug.WriteLine($"Unable to get monkeys: {ex.Message}");
+                if (Application.Current?.MainPage == null)
+                    return;
+
                 await Application.Current.MainPage.DisplayAlert("Error!", ex.Message, "OK");
             }
             finally
