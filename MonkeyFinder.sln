@@ -17,9 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFinder.tvOS", "Monkey
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Watch", "Watch", "{BB9984B1-5E89-47C6-8E7C-A18D3E40215D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFinder.WatchOSApp", "MonkeyFinder.watchOS\MonkeyFinder.watchOS.WatchOSApp\MonkeyFinder.WatchOSApp.csproj", "{F602291D-2FA4-4BFD-ABF6-0654069E63B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFinder.WatchOSApp", "MonkeyFinder.watchOS\MonkeyFinder.WatchOSApp\MonkeyFinder.WatchOSApp.csproj", "{F602291D-2FA4-4BFD-ABF6-0654069E63B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFinder.WatchOSExtension", "MonkeyFinder.watchOS\MonkeyFinder.watchOS.WatchOSExtension\MonkeyFinder.WatchOSExtension.csproj", "{8B73402C-AB11-4D3D-808A-96937341F77C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFinder.WatchOSExtension", "MonkeyFinder.watchOS\MonkeyFinder.WatchOSExtension\MonkeyFinder.WatchOSExtension.csproj", "{8B73402C-AB11-4D3D-808A-96937341F77C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
