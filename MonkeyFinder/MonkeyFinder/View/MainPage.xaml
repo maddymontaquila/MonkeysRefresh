@@ -31,17 +31,18 @@
                      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                      Grid.ColumnSpan="2"
                      Margin="5,5,5,0" >
-            <CollectionView 
+            <CollectionView
+                ItemsSource="{Binding Monkeys}"
                 SelectionMode="Single"
                 SelectionChanged="CollectionView_SelectionChanged">
-                <CollectionView.ItemsSource>
+                <!--<CollectionView.ItemsSource>
                     <x:Array Type="{x:Type model:Monkey}">
                         <model:Monkey Name="Baboon" Location="Africa and Asia"/>
                         <model:Monkey Name="Capuchin Monkey" Location="Central and South America"/>
                         <model:Monkey Name="Blue Monkey" Location="Central and East Africa"/>
                     </x:Array>
-                </CollectionView.ItemsSource>
-                <!--<CollectionView.ItemsLayout>
+                </CollectionView.ItemsSource>-->
+                <CollectionView.ItemsLayout>
                         <LinearItemsLayout Orientation="Vertical" ItemSpacing="5" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
@@ -72,7 +73,7 @@
                                 </Grid>
                             </Frame>
                         </DataTemplate>
-                    </CollectionView.ItemTemplate>--> 
+                    </CollectionView.ItemTemplate> 
             </CollectionView>
         </RefreshView>
         
@@ -86,6 +87,7 @@
             Margin="8"
             Command="{Binding GetMonkeysCommand}"
             IsEnabled="{Binding IsNotBusy}"
+            Style="{StaticResource ButtonOutline}"
             Text="Search" />
     </Grid>
 </ContentPage>
