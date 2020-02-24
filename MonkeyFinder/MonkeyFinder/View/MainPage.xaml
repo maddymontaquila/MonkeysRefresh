@@ -41,10 +41,10 @@
                         <model:Monkey Name="Blue Monkey" Location="Central and East Africa"/>
                     </x:Array>
                 </CollectionView.ItemsSource>
-                <!--<CollectionView.ItemsLayout>
+                <CollectionView.ItemsLayout>
                         <LinearItemsLayout Orientation="Vertical" ItemSpacing="5" />
                 </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
+                <!--<CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="model:Monkey">
                             <Frame
                             Margin="10,5"
