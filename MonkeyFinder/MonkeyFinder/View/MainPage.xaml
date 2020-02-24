@@ -32,9 +32,10 @@
                      Grid.ColumnSpan="2"
                      Margin="5,5,5,0" >
             <CollectionView
-                ItemsSource="{Binding Monkeys}"
+                
                 SelectionMode="Single"
-                SelectionChanged="CollectionView_SelectionChanged">
+                SelectionChanged="CollectionView_SelectionChanged"
+                ItemsSource="{Binding Monkeys}">
                 <!--<CollectionView.ItemsSource>
                     <x:Array Type="{x:Type model:Monkey}">
                         <model:Monkey Name="Baboon" Location="Africa and Asia"/>

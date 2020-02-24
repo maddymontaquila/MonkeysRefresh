@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFinder.Android", "Mon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFinder.iOS", "MonkeyFinder\MonkeyFinder.iOS\MonkeyFinder.iOS.csproj", "{124E17C8-A2BD-4C29-B4D8-EAE61DC8F5C9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonkeyFinder", "MonkeyFinder\MonkeyFinder\MonkeyFinder.csproj", "{A4767409-FD5A-408C-A0DE-9CAA76254719}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFinder", "MonkeyFinder\MonkeyFinder\MonkeyFinder.csproj", "{A4767409-FD5A-408C-A0DE-9CAA76254719}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyFinder.UWP", "MonkeyFinder\MonkeyFinder.UWP\MonkeyFinder.UWP.csproj", "{160C183C-51DF-4C77-AAE5-C652D8368771}"
 EndProject
@@ -200,6 +200,7 @@ Global
 		{124E17C8-A2BD-4C29-B4D8-EAE61DC8F5C9}.Release|x86.ActiveCfg = Release|iPhone
 		{124E17C8-A2BD-4C29-B4D8-EAE61DC8F5C9}.Release|x86.Build.0 = Release|iPhone
 		{124E17C8-A2BD-4C29-B4D8-EAE61DC8F5C9}.Release|x86.Deploy.0 = Release|iPhone
+		{124E17C8-A2BD-4C29-B4D8-EAE61DC8F5C9}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{A4767409-FD5A-408C-A0DE-9CAA76254719}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
 		{A4767409-FD5A-408C-A0DE-9CAA76254719}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
 		{A4767409-FD5A-408C-A0DE-9CAA76254719}.Ad-Hoc|Any CPU.Deploy.0 = Debug|Any CPU
