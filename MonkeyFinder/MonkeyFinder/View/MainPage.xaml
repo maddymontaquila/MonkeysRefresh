@@ -31,7 +31,8 @@
                      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                      Grid.ColumnSpan="2"
                      Margin="5,5,5,0" >
-            <CollectionView 
+            <CollectionView
+                
                 SelectionMode="Single"
                 SelectionChanged="CollectionView_SelectionChanged">
                 <CollectionView.ItemsSource>
@@ -41,10 +42,10 @@
                         <model:Monkey Name="Blue Monkey" Location="Central and East Africa"/>
                     </x:Array>
                 </CollectionView.ItemsSource>
-                <CollectionView.ItemsLayout>
+                <!--<CollectionView.ItemsLayout>
                         <LinearItemsLayout Orientation="Vertical" ItemSpacing="5" />
                 </CollectionView.ItemsLayout>
-                <!--<CollectionView.ItemTemplate>
+                <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="model:Monkey">
                             <Frame
                             Margin="10,5"
