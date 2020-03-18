@@ -92,7 +92,7 @@ namespace MonkeyFinder.View
 					new Button {
 						Text = "Search",
 						Margin = 8,
-						Style = (Style)Application.Current.Resources ["ButtonOutline"] }
+						Style = (Style)App.Current.Resources ["ButtonOutline"] }
 						.Row (1)
 						.BindCommand (nameof (MonkeysViewModel.GetMonkeysCommand))
 						.Bind (IsEnabledProperty, nameof (MonkeysViewModel.IsNotBusy))
