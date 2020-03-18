@@ -13,7 +13,7 @@
         <StackLayout>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="230"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -21,9 +21,8 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <BoxView BackgroundColor="{StaticResource Primary}" HorizontalOptions="FillAndExpand"
-            HeightRequest="100" Grid.ColumnSpan="3"/>
-                <StackLayout Grid.RowSpan="2" Grid.Column="1" Margin="0,50,0,0">
+                <MediaElement Grid.ColumnSpan="3" Source="{Binding Monkey.Video}" />
+                <StackLayout Grid.RowSpan="2" Grid.Column="1" Margin="0,165,0,0">
 
                     <imagecircle:CircleImage FillColor="White" 
                             BorderColor="White"

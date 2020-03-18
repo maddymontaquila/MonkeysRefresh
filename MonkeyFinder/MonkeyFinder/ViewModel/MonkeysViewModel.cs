@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Reflection;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
@@ -36,7 +38,7 @@ namespace MonkeyFinder.ViewModel
             {
                 IsBusy = true;
                 Monkey[] monkeys = null;
-
+				/*
                 var connection = DeviceInfo.Platform == DevicePlatform.watchOS ?
                     NetworkAccess.Internet : Connectivity.NetworkAccess;
 
@@ -55,6 +57,12 @@ namespace MonkeyFinder.ViewModel
                         new Monkey { Name = "Sample Monkey", Location = "Sample Monkey" },
                         new Monkey { Name = "Sample Monkey", Location = "Sample Monkey" }
                     };
+                }
+				*/
+
+				using (var sr = new StreamReader (typeof (MonkeysViewModel).Assembly.GetManifestResourceStream ("MonkeyFinder.data.monkeydata.json"))) {
+					var json = await sr.ReadToEndAsync ();
+					monkeys = Monkey.FromJson (json);
                 }
 
                 Monkeys.Clear();
