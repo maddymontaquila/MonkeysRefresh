@@ -9,7 +9,10 @@ namespace MonkeyFinder
     {
         public App()
         {
-            Device.SetFlags (new string [] { "MediaElement_Experimental" });
+            Device.SetFlags (new string [] {
+				"Markup_Experimental",
+				"MediaElement_Experimental"
+			});
 
             InitializeComponent ();
 
