@@ -14,10 +14,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="4.7.1" />
-    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.0-pre1" />
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.282-pre4" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.5.0.282-pre4" />
+    <PackageReference Include="System.Text.Json" Version="5.0.0-preview.1.20120.5" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.1.1.1-beta" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.379-pre1" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.379-pre1" />
   </ItemGroup>
 </Project>

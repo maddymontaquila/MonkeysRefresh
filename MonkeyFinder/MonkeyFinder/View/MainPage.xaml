@@ -3,19 +3,10 @@
     x:Class="MonkeyFinder.View.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:model="clr-namespace:MonkeyFinder.Model"
     xmlns:viewmodel="clr-namespace:MonkeyFinder.ViewModel"
     Title="{Binding Title}"
-    x:DataType="viewmodel:MonkeysViewModel"
-    mc:Ignorable="d">
-
-    <d:ContentPage.BindingContext>
-        <viewmodel:MonkeysViewModel />
-    </d:ContentPage.BindingContext>
-    
-
+    x:DataType="viewmodel:MonkeysViewModel">
 
     <Grid ColumnSpacing="5" RowSpacing="0" BackgroundColor="LightGray">
         <Grid.RowDefinitions>
@@ -33,20 +24,14 @@
                      Margin="5,5,5,0" >
             <CollectionView 
                 SelectionMode="Single"
-                SelectionChanged="CollectionView_SelectionChanged">
-                <CollectionView.ItemsSource>
-                    <x:Array Type="{x:Type model:Monkey}">
-                        <model:Monkey Name="Baboon" Location="Africa and Asia"/>
-                        <model:Monkey Name="Capuchin Monkey" Location="Central and South America"/>
-                        <model:Monkey Name="Blue Monkey" Location="Central and East Africa"/>
-                    </x:Array>
-                </CollectionView.ItemsSource>
-                <!--<CollectionView.ItemsLayout>
+                SelectionChanged="CollectionView_SelectionChanged"
+                ItemsSource="{Binding Items}">
+                <CollectionView.ItemsLayout>
                         <LinearItemsLayout Orientation="Vertical" ItemSpacing="5" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
-                        <DataTemplate x:DataType="model:Monkey">
-                            <Frame
+                    <DataTemplate x:DataType="model:Monkey">
+                        <Frame
                             Margin="10,5"
                             Padding="0"
                             BackgroundColor="White"
@@ -56,23 +41,23 @@
                             IsClippedToBounds="True"
                             HasShadow="True"
                             Visual="Material">
-                                <Grid Padding="0" ColumnSpacing="10">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="125" />
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
-                                    <Image Aspect="AspectFill" Source="{Binding Image}" />
-                                    <StackLayout
+                            <Grid Padding="0" ColumnSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="125" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Aspect="AspectFill" Source="{Binding Image}" />
+                                <StackLayout
                                     Grid.Column="1"
                                     Padding="10"
                                     VerticalOptions="Center">
-                                        <Label FontSize="Large" Text="{Binding Name}" />
-                                        <Label FontSize="Medium" Text="{Binding Location}" />
-                                    </StackLayout>
-                                </Grid>
-                            </Frame>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>--> 
+                                    <Label FontSize="Large" Text="{Binding Name}" />
+                                    <Label FontSize="Medium" Text="{Binding Location}" />
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
             </CollectionView>
         </RefreshView>
         
@@ -86,6 +71,7 @@
             Margin="8"
             Command="{Binding GetMonkeysCommand}"
             IsEnabled="{Binding IsNotBusy}"
+            Style="{StaticResource ButtonOutline}"
             Text="Search" />
     </Grid>
 </ContentPage>
